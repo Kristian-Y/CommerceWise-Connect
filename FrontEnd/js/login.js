@@ -48,7 +48,7 @@ async function Login(email, password) {
         })
         .then(response => {
             console.log(response)
-            if (response.status === 201) {
+            if (response.status === 200) {
                 alert('Login successful');
             } else {
                 alert('Login failed');

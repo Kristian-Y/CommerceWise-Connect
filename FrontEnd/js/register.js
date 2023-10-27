@@ -11,8 +11,8 @@ $(document).ready(function() {
             let lastName = document.getElementById('lastName').value.trim()
             let email = document.getElementById('email').value.trim()
             let password = document.getElementById('password').value.trim()
-            console.log(firstName)
-            RegisterUser(firstName, lastName, email, password)
+            let username = email.split('@')[0]
+            RegisterUser(username, firstName, lastName, email, password)
         })
 
 
@@ -42,8 +42,8 @@ $(document).ready(function() {
             let companyName = document.getElementById('companyName').value.trim()
             let emailC = document.getElementById('email-c').value.trim()
             let passwordC = document.getElementById('password-c').value.trim()
-
-            RegisterCompanyUser(companyName, emailC, passwordC)
+            let usernameC = emailC.split('@')[0]
+            RegisterCompanyUser(usernameC, companyName, emailC, passwordC)
         })
 
 
@@ -79,13 +79,13 @@ $(document).ready(function() {
     })
 });
 
-async function RegisterUser(firstName, lastName, email, password) {
+async function RegisterUser(username, firstName, lastName, email, password) {
     await fetch('http://127.0.0.1:8000/usermanagment/register-user/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ firstName, lastName, email, password }),
+            body: JSON.stringify({ username, firstName, lastName, email, password }),
         })
         .then(response => {
             console.log(response)
@@ -97,14 +97,14 @@ async function RegisterUser(firstName, lastName, email, password) {
         });
 }
 
-async function RegisterCompanyUser(companyName, email, password) {
+async function RegisterCompanyUser(username, companyName, email, password) {
     console.log(companyName)
     await fetch('http://127.0.0.1:8000/usermanagment/register-company-user/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ companyName, email, password }),
+            body: JSON.stringify({ username, companyName, email, password }),
         })
         .then(response => {
             console.log(response)

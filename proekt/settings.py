@@ -40,13 +40,6 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',  # Add this by default
-    'django.contrib.auth.backends.AllowAllUsersModelBackend',
-    'django.contrib.auth.backends.RemoteUserBackend',
-    'django.contrib.auth.backends.EmailBackend',  # Add this for email-based authentication
-]
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -86,7 +79,7 @@ WSGI_APPLICATION = 'proekt.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'commercewise',
+        'NAME': 'testdj2',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
