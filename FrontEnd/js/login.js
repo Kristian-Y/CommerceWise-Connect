@@ -21,9 +21,8 @@ $(document).ready(function() {
     $(document).on('click', '#login-btn-form', function(e) {
         e.preventDefault()
 
-        let email = document.getElementById('email')
-        let password = document.getElementById('password').value.trim()
-        console.log(email)
+        let email = document.getElementById('email-login').value.trim()
+        let password = document.getElementById('password-login').value.trim()
         Login(email, password)
     })
 
@@ -40,20 +39,19 @@ async function test() {
 }
 
 async function Login(email, password) {
-    console.log(email)
-        //await fetch('http://127.0.0.1:8000/usermanagment/test/', {
-        //        method: 'POST',
-        //        headers: {
-        //            'Content-Type': 'application/json',
-        //        },
-        //        body: JSON.stringify({ email, password }),
-        //    })
-        //    .then(response => {
-        //        console.log(response)
-        //        if (response.status === 201) {
-        //            alert('Login successful');
-        //        } else {
-        //            alert('Login failed');
-        //        }
-        //    });
+    await fetch('http://127.0.0.1:8000/usermanagment/test/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        })
+        .then(response => {
+            console.log(response)
+            if (response.status === 201) {
+                alert('Login successful');
+            } else {
+                alert('Login failed');
+            }
+        });
 }
