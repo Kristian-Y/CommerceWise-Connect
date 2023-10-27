@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="register-form" id="register-form" style="display: none;">
+        <div class="register-form-client" id="l-register">
+            <h1>Register - Client</h1>
+            <div class="name">
+                <div class="input names-input">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="First Name">
+                </div>
+                <div class="input names-input">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="input">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="E-mail">
+            </div>
+            <div class="input">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="form-btns">
+                <a href="#" id="register-btn" class="register-btn">Register</a>
+                <a href="#" id="change" class="register-btn">Register Company</a>
+            </div>
+        </div>
+        <div class="register-form-company" id="c-register" style="display: none;">
+            <h1>Register - Company</h1>
+            <div class="input">
+                <label for="companyName">Company Name</label>
+                <input type="text" id="companyName" placeholder="Company Name">
+            </div>
+            <div class="input">
+                <label for="email">E-mail of the company</label>
+                <input type="email" id="email" placeholder="E-mail of the company">
+            </div>
+            <div class="input">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="form-btns">
+                <a href="#" id="register-btn" class="register-btn">Register</a>
+                <a href="#" id="change-cli" class="register-btn">Register Client</a>
+            </div>
+        </div>
+    </div>
+    <main>
+
+        <nav>
+            <div class="nav-bar">
+                <img src="img/logo-icon.png" alt="">
+
+                <div class="nav-btns">
+                    <a href="" id="login-btn">Login</a>
+                    <a href="" id="register-btn">Register</a>
+                </div>
+            </div>
+
+            <div class="info">
+                <div class="info-box">
+                    <img src="img/logo-text.png" alt="">
+                    <p><strong>Welcome to CommerceWise Connect.</strong> <br>At CommerceWise Connect, we are dedicated to providing innovative and convenient payment and trade solutions for our customers. Our mission is to facilitate merchants and consumers
+                        in connecting, buying, and selling goods and services with confidence and satisfaction.</p>
+                </div>
+            </div>
+        </nav>
+
+        <section class="about">
+            <h1>About US</h1>
+            <div class="about-info">
+                <img src="img/about-img.jpg" alt="">
+                <div class="breakline"></div>
+                <div class="about-text">
+                    <strong>What We Offer:</strong>
+                    <ol>
+                        <li><strong>Secure and Fast Payments:</strong> With CommerceWise Connect, you can make payments with ease and security, whether you're a merchant or a consumer.</li>
+                        <li><strong>Extensive Marketplace:</strong> Discover a rich variety of goods and services from various merchants who are part of our platform.</li>
+                        <li><strong>Convenience and Easy Navigation:</strong> Our application is designed with a focus on user experience to provide you with an intuitive and easy way to shop and sell.</li>
+                        <li><strong>Customer Support:</strong> Our team of customer consultants is here to assist you with any questions or issues you may have.</li>
+                    </ol>
+                    <strong>Why Choose Us:</strong> <br>
+                    <ul>
+                        <li>We believe in transparency, security, and convenience in trade and payments. With CommerceWise Connect, you will find a reliable partner who cares about your needs. Thank you for choosing CommerceWise Connect for your trade and
+                            payment needs. Feel free to contact us if you have any questions or want to learn more about our services.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-info">
+                <img src="img/logo.png" alt="">
+                <div class="breakline-footer"></div>
+                <div class="contacts">
+                    <a href=""><i class="fa fa-phone" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <p class="rights">© 2023 - DjungurDevelepment - CommerceWise Connect - All Rights Reserved.</p>
+        </footer>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
