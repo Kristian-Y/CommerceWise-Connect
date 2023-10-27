@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width device-width, initial-scale=1.0">
 	<title>CommerceWise-connect userMain</title>
 	<link rel="stylesheet" href="css/userMain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -20,37 +21,25 @@
                     <a href="" id="login-btn">Logout</a> 
                 </div>
             </div>
-            <div class="center">
-            	<div class="search-container">
-            		<input class="search1"type="text" name="search">
-            		<div class="search-icon">
-            		<a href="">
-            			<img src="img/search-icon.png" alt="Search Icon">
-            		</a>
-            		</div>
-            	</div>
-            	<div class="recommended-searches">
-            <h2>Recommended Searches</h2>
-            <ul>
-                <li><a href="#">Search Term 1</a></li>
-                <li><a href="#">Search Term 2</a></li>
-                <li><a href="#">Search Term 3</a></li>
-                <!-- Add more recommended search terms as needed -->
-            </ul>
-        </div>
-            </div>
-        </nav>
-        <!--<footer>
-            <div class="footer-info">
-                <img src="img/info-bg.png" alt="">
-                <div class="breakline-footer"></div>
-                <div class="contacts">
-                    <a href=""><i class="fa fa-phone" aria-hidden="true"></i></a>
-                    <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <div class="search-bar">
+                <div class="inputGroup">
+                    <input type="text" onkeyup="searchCards()" name="text" class="input" id="search" placeholder="Търсене">
                 </div>
             </div>
-            <p class="rights">© 2023 - DjungurDevelepment - CommerceWise Connect - All Rights Reserved.</p>
-        </footer>-->
-	</main>
-</body>
+            <div class="container">
+                <div class="cards-container" id="cards-container">
+                    <div class="myCard">
+                        <div class="innerCard">
+                            <div class="frontSide">
+                                <p class="title">Company name</p>
+                                <i style="font-size: 3rem;" class="ico fa fa-briefcase"></i>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        
+            <script src="js/test.js"></script>
+        </body>
