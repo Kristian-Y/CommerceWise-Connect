@@ -141,16 +141,17 @@ footer img {
 .register-form {
     position: absolute;
     display: flex;
-    top: -300px;
-    left: 45%;
-    height: 300px;
+    top: 50%;
+    left: 42%;
+    height: 30%;
     background-color: #65B5B6;
-    width: 335px;
+    width: auto;
     color: white;
     border: solid 2px black;
     border-radius: 5px;
     padding: 10px;
     z-index: 99;
+    margin: auto;
 }
 
 .input {
@@ -167,11 +168,25 @@ footer img {
 
 .names-input input {
     max-width: 150px;
-    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgba(253, 253, 253, 0.468);
+}
+
+.names-input input::placeholder {
+    color: white;
 }
 
 .register-form input {
-    border-radius: 5px;
+    border-radius: 1px;
+    height: 1.3rem;
+    border: none;
+    outline: none;
+    background-color: rgba(253, 253, 253, 0.468);
+}
+
+.input ::placeholder {
+    color: white;
 }
 
 .register-form a {
@@ -205,10 +220,10 @@ footer img {
     background-color: #F0932C;
     border-radius: 5px;
     font-size: 120%;
-    transition: font-size 0.3s ease-uot;
+    transition: 0.2s ease-in-out;
 }
 
 .register-btn:hover {
-    background-color: #F0932C;
-    font-size: 110%;
+    text-shadow: 1px 2px rgb(60, 60, 60);
+    transform: scale(1.1);
 }
