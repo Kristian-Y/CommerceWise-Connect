@@ -1,0 +1,251 @@
+:root{
+    --purple:#100124;
+    --red:#ee4557;
+    --yellow:#D48E39;
+    --blue:#79AFA1;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: gray;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    height: 40px;
+    gap: 800px;
+}
+
+.nav-bar img {
+    height: 40px;
+    width: 40px;
+    padding-top: 5px;
+}
+
+.nav-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nav-btns a {
+    color: white;
+    text-decoration: none;
+    transition: border-bottom 0.2s ease-in;
+    padding-top: 5px;
+    height: 36px;
+    padding-top: 10px;
+}
+
+.nav-btns a:hover {
+    border-bottom: solid 5px #65B5B6;
+    color: #65B5B6;
+}
+
+.center {
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 39%;
+}
+
+.search1 {
+    width: 400px;
+    height: 20px;
+    border: 3px solid black;
+}
+
+.ico {
+    position: relative;
+    top: -5rem;
+}
+
+.recommended-searches {
+    background-color: white; /* Adjust the background color as needed */
+    padding: 170px; /* Adjust the padding as needed */
+    border: 3px solid black; /* Add a border as needed */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    margin-top: 50px; /* Adjust the margin as needed */
+    position: relative;
+    width: 800px;
+    left: 21%;
+}
+
+.recommended-searches h2 {
+    font-size: 18px; /* Adjust the heading font size as needed */
+    margin: 0;
+}
+
+.recommended-searches ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recommended-searches li {
+    margin: 5px 0;
+}
+
+.recommended-searches a {
+    text-decoration: none;
+    color: #333; /* Adjust the text color as needed */
+}
+
+.container {
+    background-color: #b6c5c5;
+    width: 75vw;
+    height: auto;   
+    top: 20vh;
+    position: relative;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 1px -2px 35px -3px rgba(255,255,255,0.81);
+-webkit-box-shadow: 1px -2px 35px -3px rgba(255,255,255,0.81);
+-moz-box-shadow: 1px -2px 35px -3px rgba(255,255,255,0.81);
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 6vh;
+    position: relative;
+    left: 2vw;
+    top: 5vh;
+    padding-bottom: 10vh;
+}
+
+.card {
+    background-color: grey;
+    width: 15vw;
+    height: 35vh;
+    border-radius: 12px;
+    perspective: 1000px;
+}
+
+.myCard {
+    background-color: transparent;
+    width: 15vw;
+    height: 35vh;
+    perspective: 1000px;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top: 6vh;
+  }
+  
+  .innerCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .frontSide,
+  .backSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+  }
+  
+  .frontSide,
+  .frontSide::before {
+    background: linear-gradient(43deg, var(--blue) 35%, var(--yellow) 100%);
+
+  }
+  
+  .backSide,
+  .backSide::before {
+    background-image: linear-gradient(160deg, var(--red) 0%, var(--yellow) 100%);
+  }
+  
+  .backSide {
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide::before,
+  .backSide::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 1em;
+    filter: blur(20px);
+    animation: animate 5s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      opacity: 0.3;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0.3;
+    }
+  }
+
+.frontSide img {
+    width: 6vw;
+    height: 12vh;
+    position: absolute;
+    left: 4.7vw;
+    top: 1vh;
+}
+
+.input {
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #e8e8e8;
+    box-shadow: 20px 20px 60px #c5c5c5,
+           -20px -20px 60px #ffffff;
+    transition: 0.3s;
+    position: absolute;
+    top: 12vh;
+    left: 12vw;
+    width: 35vw;
+}
+   
+.input:focus {
+    outline-color: #e8e8e8;
+    background: #e8e8e8;
+    box-shadow: inset 20px 20px 60px #c5c5c5,
+           inset -20px -20px 60px #ffffff;
+    transition: 0.3s;
+}
