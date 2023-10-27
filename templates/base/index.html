@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <main>
+        <nav>
+            <div class="nav-bar">
+                <img src="{% static 'img/logo-icon.png' %}" alt="">
+
+                <div class="nav-btns">
+                    <a href="">Login</a>
+                    <a href="">Register</a>
+                </div>
+            </div>
+
+            <div class="info" style="background: url({% static 'img/info-bg.png' %}) no-repeat center center fixed;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                    ">
+                <div class="info-box">
+                    <img src=" {% static 'img/logo-text.png'%}" alt="">
+                    <p><strong>Welcome to CommerceWise Connect.</strong> <br>At CommerceWise Connect, we are dedicated to providing innovative and convenient payment and trade solutions for our customers. Our mission is to facilitate merchants and consumers
+                        in connecting, buying, and selling goods and services with confidence and satisfaction.</p>
+                </div>
+            </div>
+        </nav>
+        <section class="about">
+            <h1>About US</h1>
+            <div class="about-info">
+                <img src=" {% static 'img/about-img.jpg' %}" alt="">
+                <div class="breakline"></div>
+                <div class="about-text">
+                    <strong>What We Offer:</strong>
+                    <ol>
+                        <li><strong>Secure and Fast Payments:</strong> With CommerceWise Connect, you can make payments with ease and security, whether you're a merchant or a consumer.</li>
+                        <li><strong>Extensive Marketplace:</strong> Discover a rich variety of goods and services from various merchants who are part of our platform.</li>
+                        <li><strong>Convenience and Easy Navigation:</strong> Our application is designed with a focus on user experience to provide you with an intuitive and easy way to shop and sell.</li>
+                        <li><strong>Customer Support:</strong> Our team of customer consultants is here to assist you with any questions or issues you may have.</li>
+                    </ol>
+                    <strong>Why Choose Us:</strong> <br>
+                    <ul>
+                        <li>We believe in transparency, security, and convenience in trade and payments. With CommerceWise Connect, you will find a reliable partner who cares about your needs. Thank you for choosing CommerceWise Connect for your trade and
+                            payment needs. Feel free to contact us if you have any questions or want to learn more about our services.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-info">
+                <img src="{% static 'img/logo.png' %}" alt="">
+                <div class="breakline-footer"></div>
+                <div class="contacts">
+                    <a href=""><i class="fa fa-phone" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <p class="rights">© 2023 - DjungurDevelepment - CommerceWise Connect - All Rights Reserved.</p>
+        </footer>
+    </main>
+</body>
+
+</html>
