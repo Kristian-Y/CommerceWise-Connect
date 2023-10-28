@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
-    'testdj.users'
+    'testdj.users',
+    'testdj.products'
 ]
 
 MIDDLEWARE = [
