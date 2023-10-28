@@ -3,30 +3,38 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width device-width, initial-scale=1.0">
-	<title>CommerceWise-connect userMain</title>
-	<link rel="stylesheet" href="css/userMain.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width device-width, initial-scale=1.0">
+    <title>CommerceWise-connect userMain</title>
+    <link rel="stylesheet" href="css/userMain.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
-	<main>
-		<nav>
+    <main>
+        <nav>
             <div class="nav-bar">
-            	<a href="index.html">
-                <img src="img/logo-icon.png" alt="Logo">
+                <a href="index.html">
+                    <img src="img/logo-icon.png" alt="Logo">
                 </a>
                 <div class="nav-btns">
-                    <a href="" id="login-btn">Logout</a> 
+                    <a href="" id="login-btn">Logout</a>
                 </div>
             </div>
+        </nav>
+        <section class="title">
+            <img src="img/logo-text.png" alt="">
+            <h1>CLIENT HUB</h1>
+        </section>
+        <section class="search-and-companies">
             <div class="search-bar">
                 <div class="inputGroup">
                     <input type="text" onkeyup="searchCards()" name="text" class="input" id="search" placeholder="Търсене">
                 </div>
             </div>
-            <div class="container">
+            <div class="container" id="companies">
                 <div class="cards-container" id="cards-container">
                     <div class="myCard">
                         <div class="innerCard">
@@ -37,9 +45,66 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="myCard">
+                        <div class="innerCard">
+                            <div class="frontSide">
+                                <p class="title">Company name</p>
+                                <i style="font-size: 3rem;" class="ico fa fa-briefcase"></i>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard">
+                        <div class="innerCard">
+                            <div class="frontSide">
+                                <p class="title">Company name</p>
+                                <i style="font-size: 3rem;" class="ico fa fa-briefcase"></i>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard">
+                        <div class="innerCard">
+                            <div class="frontSide">
+                                <p class="title">Company name</p>
+                                <i style="font-size: 3rem;" class="ico fa fa-briefcase"></i>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard">
+                        <div class="innerCard">
+                            <div class="frontSide">
+                                <p class="title">Company name</p>
+                                <i style="font-size: 3rem;" class="ico fa fa-briefcase"></i>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard">
+                        <div class="innerCard">
+                            <div class="frontSide">
+                                <p class="title">Company name</p>
+                                <i style="font-size: 3rem;" class="ico fa fa-briefcase"></i>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard">
+                        <div class="innerCard">
+                            <div class="frontSide">
+                                <p class="title">Company name</p>
+                                <i style="font-size: 3rem;" class="ico fa fa-briefcase"></i>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-        
-            <script src="js/test.js"></script>
-        </body>
+        </section>
+
+        <script src="js/user_dashboard.js"></script>
+</body>
+
+</html>
