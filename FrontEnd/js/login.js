@@ -23,23 +23,14 @@ $(document).ready(function() {
 
         let email = document.getElementById('email-login').value.trim()
         let password = document.getElementById('password-login').value.trim()
+        console.log(email)
         Login(email, password)
     })
 
 })
 
-async function test() {
-    await fetch('http://127.0.0.1:8000/usermanagment/test', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ test: "test" }),
-    })
-}
-
 async function Login(email, password) {
-    await fetch('http://127.0.0.1:8000/usermanagment/test/', {
+    await fetch('http://127.0.0.1:8000/usermanagment/user-login/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -47,11 +38,28 @@ async function Login(email, password) {
             body: JSON.stringify({ email, password }),
         })
         .then(response => {
-            console.log(response)
             if (response.status === 200) {
                 alert('Login successful');
+                console.log(response)
+
+                return response.json();
             } else {
+                console.log(response)
                 alert('Login failed');
             }
-        });
+        })
+        .then(data => {
+            if (data != undefined) {
+                console.log(data)
+                if (data.user_group == 'client') {
+                    window.location.href = '/FrontEnd/userMain.html';
+                } else if (data.user_group == 'company') {
+                    console.log('nishto')
+                }
+
+                localStorage.setItem('authToken', data.token);
+            }
+
+
+        })
 }

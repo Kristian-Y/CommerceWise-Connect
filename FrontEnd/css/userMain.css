@@ -42,6 +42,12 @@ body {
     padding-top: 10px;
 }
 
+.nav-btns h4 {
+    color: white;
+    margin: 0;
+    margin-top: 10px;
+}
+
 .nav-btns a:hover {
     border-bottom: solid 5px #65B5B6;
     color: #65B5B6;

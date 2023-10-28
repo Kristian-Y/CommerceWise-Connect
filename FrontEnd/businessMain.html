@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommerceWise Connect</title>
+    <link rel="shortcut icon" type="x-icon" href="img/logo-icon.png">
+    <link rel="stylesheet" href="css/businessMain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <div class="product-form" id="product-form">
+        <button class="exitbtn">&times</button>
+        <h1>Create Product or Service</h1>
+        <div class="inputs">
+            <div class="input">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Name">
+            </div>
+            <div class="input">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
+            </div>
+            <div class="input">
+                <label for="number">Price</label>
+                <input type="number" id="price" placeholder="Price">
+            </div>
+            <div class="input">
+                <label for="type">Type</label>
+
+                <select name="tpye" id="type">
+					<option value="prodcut">Product</option>
+					<option value="service">Service</option>
+				</select>
+            </div>
+        </div>
+        <a href="" id="form-create">Create</a>
+    </div>
+
+    <nav>
+        <div class="nav-bar">
+            <a href="index.html">
+                <img src="img/logo-icon.png" alt="Logo">
+            </a>
+            <div class="nav-btns">
+                <a href="" id="login-btn">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="main">
+            <div class="nav-bar-left">
+                <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                <a href="" id="create-product-btn"><i class="fa fa-archive" aria-hidden="true"></i></a>
+            </div>
+            <div class="info">
+                <h1><strong>Welcome sss<strong></h1>
+			</div>
+		</section>
+	</main>
+	<script src="js/company_dashboard.js"></script>
+</body>
+
+</html>

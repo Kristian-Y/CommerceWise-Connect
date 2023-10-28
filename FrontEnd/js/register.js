@@ -12,7 +12,14 @@ $(document).ready(function() {
             let email = document.getElementById('email').value.trim()
             let password = document.getElementById('password').value.trim()
             let username = email.split('@')[0]
-            RegisterUser(username, firstName, lastName, email, password)
+            let data = {
+                'first_name': firstName,
+                'last_name': lastName,
+                'email': email,
+                'password': password,
+                'username': username
+            }
+            RegisterUser(data)
         })
 
 
@@ -28,7 +35,7 @@ $(document).ready(function() {
     });
 
     $(document).on('click', "#change", function(e) {
-        e.preventDefault
+        e.preventDefault()
         $("#register-form").animate({ top: '100%' }, 500);
         let cregister = document.getElementById('c-register')
         cregister.style.display = ''
@@ -40,10 +47,17 @@ $(document).ready(function() {
         $(document).on('click', '#register-btn-form-c', function(e) {
             e.preventDefault()
             let companyName = document.getElementById('companyName').value.trim()
-            let emailC = document.getElementById('email-c').value.trim()
-            let passwordC = document.getElementById('password-c').value.trim()
-            let usernameC = emailC.split('@')[0]
-            RegisterCompanyUser(usernameC, companyName, emailC, passwordC)
+            let email = document.getElementById('email-c').value.trim()
+            let password = document.getElementById('password-c').value.trim()
+            let username = email.split('@')[0]
+            let data = {
+                'company_name': companyName,
+                'email': email,
+                'password': password,
+                'username': username,
+                'description': 'test'
+            }
+            RegisterUser(data)
         })
 
 
@@ -79,39 +93,52 @@ $(document).ready(function() {
     })
 });
 
-async function RegisterUser(username, firstName, lastName, email, password) {
-    await fetch('http://127.0.0.1:8000/usermanagment/register-user/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ username, firstName, lastName, email, password }),
-        })
-        .then(response => {
-            console.log(response)
-            if (response.status === 201) {
-                alert('Registration successful');
-            } else {
-                alert('Registration failed');
-            }
-        });
-}
+async function RegisterUser(data) {
+    console.log(data['company_name'])
+    if (data['company_name'] === undefined) {
+        await fetch('http://127.0.0.1:8000/usermanagment/register-user/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    'username': data['username'],
+                    'first_name': data['first_name'],
+                    'last_name': data['last_name'],
+                    'email': data['email'],
+                    'password': data['password']
+                }),
+            })
+            .then(response => {
+                console.log(response)
+                if (response.status === 201) {
+                    alert('Registration successful');
+                } else {
+                    alert('Registration failed');
+                }
+            });
+    } else {
+        await fetch('http://127.0.0.1:8000/usermanagment/register-user/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    'username': data['username'],
+                    'company_name': data['company_name'],
+                    'description': data['description'],
+                    'email': data['email'],
+                    'password': data['password']
+                }),
+            })
+            .then(response => {
+                console.log(response)
+                if (response.status === 201) {
+                    alert('Registration successful');
+                } else {
+                    alert('Registration failed');
+                }
+            });
+    }
 
-async function RegisterCompanyUser(username, companyName, email, password) {
-    console.log(companyName)
-    await fetch('http://127.0.0.1:8000/usermanagment/register-company-user/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ username, companyName, email, password }),
-        })
-        .then(response => {
-            console.log(response)
-            if (response.status === 201) {
-                alert('Registration successful');
-            } else {
-                alert('Registration failed');
-            }
-        });
 }
