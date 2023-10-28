@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    height: 40px;
+    gap: 800px;
+}
+
+.nav-bar img {
+    height: 40px;
+    width: 40px;
+    padding-top: 5px;
+}
+
+.title-bar {
+    display: flex;
+    flex-direction: row;
+    color: solid black;
+    font-size: 30px;
+    position: relative;
+    left: 43%;
+    padding-top: 10%;
+}
+
+
+.nav-btn1 img {
+    height: 70px;
+    width: 70px;
+}
