@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #589596;
+}
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    height: 40px;
+    gap: 800px;
+}
+
+.nav-bar img {
+    height: 40px;
+    width: 40px;
+    padding-top: 5px;
+}
+
+.nav-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nav-btns a {
+    color: white;
+    text-decoration: none;
+    transition: border-bottom 0.2s ease-in;
+    padding-top: 5px;
+    height: 36px;
+    padding-top: 10px;
+}
+
+.nav-btns a:hover {
+    border-bottom: solid 5px #65B5B6;
+    color: #65B5B6;
+}
+.conteiner{
+    background-color: #f5f5f5;
+    width: 75vw;
+    height: auto;   
+    top: 14vh;
+    position: relative;
+    margin: auto;
+    border-radius: 15px;
+    padding: 20px; 
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+}
+h1{
+    text-align: center;
+}
+p{
+    font-size: 20px;
+    margin: 10px;
+}
+hr {
+    border: 1px solid #333; 
+}
+.button-container {
+    display: flex;
+    gap: 10px; 
+  }
+.button1, .button2 {
+    background: #40aaa5;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px #79AFA1;
+    transition: background 0.3s ease; 
+  }
+  button:hover {
+    background-color: #D48E39; 
+  }
+  .input-stepper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-stepper button {
+    background: #40aaa5;
+    color: #fff;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .input-stepper button:hover {
+    background-color: #D48E39;
+  }
+  
+  .input-stepper input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 16px;
+  }
+  .backBtn{
+    background: #40aaa5;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    height: 35px;
+    border-radius: 30px;
+    box-shadow: 0px 5px 15px 0px #79AFA1;
+    transition: background 0.3s ease; 
+  }
+  
+  
