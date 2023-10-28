@@ -142,7 +142,7 @@ footer img {
     position: absolute;
     display: flex;
     top: -300px;
-    left: 45%;
+    left: 39%;
     height: 300px;
     background-color: #65B5B6;
     width: 335px;
@@ -157,7 +157,7 @@ footer img {
     position: absolute;
     display: flex;
     top: -300px;
-    left: 45%;
+    left: 39%;
     height: 250px;
     background-color: #65B5B6;
     width: 335px;
@@ -240,4 +240,25 @@ footer img {
 .register-btn:hover {
     background-color: #F0932C;
     font-size: 110%;
+}
+.exitbtn{
+    position: absolute;
+    right: 12px;
+    top: 15px;
+    background-color: transparent;
+    font-size: 20px;
+    width: 30px;
+    cursor:pointer;
+    border: 1px solid;
+    border-radius: 20%; 
+    transition: all 0.2s ease-in;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Arial', sans-serif;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+.exitbtn:hover{
+    opacity: 0.7;
+    background-color:#F0932C;
+    transform: scale(1.2);
 }
