@@ -65,12 +65,15 @@ async function loadCompanies() {
                             </div>
                         </div>
                 `
-
+                console.log(company.id)
+                console.log(company)
                 document.getElementById(`${company.username}`).addEventListener('click', () => {
                     const data = {
                         compan_username: `${company.username}`,
                         company_email: `${company.email}`,
-                        company_name: `${company.company_name}`
+                        company_name: `${company.company_name}`,
+                        id: `${company.id}`,
+                        company_description: `${company.description}`
                     };
 
                     const encodedData = encodeURIComponent(JSON.stringify(data));

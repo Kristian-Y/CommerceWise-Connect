@@ -19,6 +19,27 @@ body {
     gap: 800px;
 }
 
+.nav-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nav-btns a {
+    color: white;
+    text-decoration: none;
+    transition: border-bottom 0.2s ease-in;
+    padding-top: 5px;
+    height: 36px;
+    padding-top: 10px;
+}
+
+.nav-btns h4 {
+    color: white;
+    margin: 0;
+    margin-top: 10px;
+}
+
 .nav-bar img {
     height: 40px;
     width: 40px;

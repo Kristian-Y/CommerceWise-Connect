@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/productInfo.css">
-    <link rel="shortcut icon" type="x-icon" href="img/logo-icon.png"> 
+    <link rel="shortcut icon" type="x-icon" href="img/logo-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>CommerceWise Product Info</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
     <meun>
         <nav>
@@ -19,44 +22,48 @@
                     <div class="nav-btns">
                         <a href="" id="login-btn">Logout</a>
                     </div>
-                </div> 
+                </div>
             </div>
         </nav>
         <div class="conteiner" id="">
             <div>
-            <button class="backBtn" type="back" href="">Back</button>
+                <button class="backBtn" type="back" href="" id="back-btn">Back</button>
             </div>
-            <h1>Product or service</h1>
+            <h1 id="name">Product or service</h1>
             <hr>
             <p class="info" id="info">
-                
-            Certainly, I can help you create a freeform text description for a service. Please provide me with the details you'd like to include in the description, such as:
 
-            The name of the service.
-            A brief overview of the service.
-            The target audience or the benefits it offers to customers.
-            Key features or characteristics of the service.
-            Pricing information (if applicable).
-            How to contact or request the service.
+                Certainly, I can help you create a freeform text description for a service. Please provide me with the details you'd like to include in the description, such as: The name of the service. A brief overview of the service. The target audience or the benefits
+                it offers to customers. Key features or characteristics of the service. Pricing information (if applicable). How to contact or request the service.
             </p>
             <hr>
             <p class="price" id="price">
                 Price is: 1000 lv
             </p>
-            <div class="input-stepper">
-                <p>Quantity:</p>
-                <button class="decrement">-</button>
-                <input type="number" class="value" value="1">
-                <button class="increment">+</button>
-              </div>
-            <div class="button-container">
-                <button class="button1" type="buy">BUY</button>
-                <button class="button2" type="buyCripto">BUY with crypto</button>
-              </div>
+            <div class="bottom">
+                <div class="left">
+                    <div class="input-stepper">
+                        <p>Quantity:</p>
+                        <button class="decrement">-</button>
+                        <input type="number" class="value" value="1">
+                        <button class="increment">+</button>
+                    </div>
+                    <div class="button-container">
+                        <button class="button1" type="buy">BUY</button>
+                        <button class="button2" type="buyCripto">BUY with crypto</button>
+                    </div>
+                </div>
+                <div class="right">
+                    <h2 id="c-name">Company name:</h2>
+                    <h2 id="type">Type: </h2>
+                </div>
+            </div>
 
         </div>
 
     </meun>
     <script src="js/input-stepper.js"></script>
+    <script src="js/p_info.js"></script>
 </body>
+
 </html>

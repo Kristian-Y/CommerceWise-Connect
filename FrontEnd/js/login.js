@@ -54,7 +54,7 @@ async function Login(email, password) {
                 if (data.user_group == 'client') {
                     window.location.href = '/FrontEnd/userMain.html';
                 } else if (data.user_group == 'company') {
-                    console.log('nishto')
+                    window.location.href = '/FrontEnd/businessMain.html';
                 }
 
                 localStorage.setItem('authToken', data.token);
