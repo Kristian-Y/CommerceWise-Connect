@@ -37,13 +37,12 @@ class RegistrationView(APIView):
 
 
 @api_view(['POST'])
+@permission_classes([AllowAny])
 def user_login(request):
     if request.method == 'POST':
         serializer = LoginSerializer(data=request.data)
-        print(serializer.initial_data['email'])
         if serializer.is_valid():
             username = serializer.data['email']
-            print(username)
             password = serializer.data['password']
 
             user = None
@@ -52,7 +51,6 @@ def user_login(request):
                     user_data = CustomUser.objects.get(email=username)
                     if user_data.password == password:
                         user = CustomUser.objects.get(email=username)
-                        print(user)
                     else:
                         return Response({'error': 'Invalid password or email'}, status=status.HTTP_401_UNAUTHORIZED)
                 except ObjectDoesNotExist:
@@ -61,12 +59,13 @@ def user_login(request):
                 return Response({'error': 'Invalid email'}, status=status.HTTP_401_UNAUTHORIZED)
 
             if user:
+                print('Test')
                 login(request, user)
                 token, _ = Token.objects.get_or_create(user=user)
                 user_group = user.groups.first().name
                 return Response({'token': token.key, 'user_group': user_group}, status=status.HTTP_200_OK)
 
-        return Response({'error': 'Invalid pederas'}, status=status.HTTP_401_UNAUTHORIZED)
+        return Response({'error': serializer.errors}, status=status.HTTP_401_UNAUTHORIZED)
 
 
 @api_view(['GET'])
@@ -82,6 +81,17 @@ def getCompanies(request):
 
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
+def getCompany_by_id(request, company_id):
+    company = CompanyUser.objects.get(id=company_id)
+    if company:
+        serializer = CompanySerializerGet(company)
+        print(serializer.data)
+        return Response(serializer.data, status=200)
+    return Response("Nqma takava", status=404)
+
+
+@api_view(['GET'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def is_user_logged_in(request):
@@ -89,7 +99,8 @@ def is_user_logged_in(request):
     if user:
         data = {
             'user': user.email,
-            'is_authenticated': True
+            'is_authenticated': True,
+            'company_name': ''
         }
         return Response(data, status=200)
     return Response('nqma', status=401)

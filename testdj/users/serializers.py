@@ -25,4 +25,4 @@ class LoginSerializer(serializers.Serializer):
 class CompanySerializerGet(serializers.ModelSerializer):
     class Meta:
         model = CompanyUser
-        fields = ('username', 'companyName', 'email')
+        fields = ('username', 'company_name', 'email', 'id', 'description')
